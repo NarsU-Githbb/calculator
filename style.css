@@ -1,0 +1,27 @@
+h1 {
+    
+display: flex;
+justify-content: center;
+
+}
+
+#container {
+
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    margin: -10px;
+    border-left: -20px;
+}
+button {
+
+    border-radius: 10px;
+    
+    }
+#display-screen {
+
+    margin-top: 20px;
+    padding: 20px;
+    border-style: dotted;
+
+}    
