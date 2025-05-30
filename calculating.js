@@ -43,6 +43,10 @@ const buttonNine = document.getElementById('ninth');
 buttonNine.addEventListener('click', function() { 
     showCalculating.textContent += 9;
 });
+const buttonFractions = document.getElementById('decimal');
+buttonFractions.addEventListener('click', function() { 
+    showCalculating.textContent += ",";
+});
 const buttonNada = document.getElementById('zero');
 buttonNada.addEventListener('click', function() { 
     showCalculating.textContent += 0;
@@ -62,6 +66,10 @@ buttonCross.addEventListener('click', function() {
 const buttonSlice = document.getElementById('divide');
 buttonSlice.addEventListener('click', function() { 
     showCalculating.textContent += fractionate;
+});
+const buttonDelete = document.getElementById('backspace');
+buttonDelete.addEventListener('click', function() { 
+    showCalculating.textContent = showCalculating.textContent.slice(0,-1);
 });
 const buttonResult = document.getElementById('equals');
 buttonResult.addEventListener('click', function() { 
@@ -110,26 +118,22 @@ function operate() {
     }
 
     showCalculating.textContent = result;
+   
 }
 
 
 
-//function operate() { 
+// List of logic I need to write:
 
-//if (operators == fractionate) {
-  //  display.value = nums1/nums2;
-//}
+// 1. return result if you press for a second operator
+// 2. make sure that you can't make numbers like 0984+0001
+// 3. If calculator returns NaN - make calculator screen say ERROR
 
-//else if(operators == grow) { 
-    //display.value = nums1*nums2;
+//Something like:
 
-//}
+//if (showCalculating.textContent = NaN) { 
+        //return "error"
+        //}
 
-//else if(operators == lessen) { 
-    //display.value = nums1-nums2;
 
-//}
-//else if(operators == total) { 
-    //display.value = nums1+nums2;
-
-//}
+// 5. Decimal numbers? I have a button that adds ",", but end math doesn't work
